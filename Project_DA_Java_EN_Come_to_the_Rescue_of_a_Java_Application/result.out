@@ -1,23 +1,24 @@
-Symptom tremor : 4
-Symptom dizziness : 5
-Symptom blindness : 1
-Symptom constricted pupils : 3
-Symptom fever : 7
-Symptom stiff neck : 4
-Symptom dilated pupils : 4
-Symptom cough : 6
-Symptom insomnia : 4
-Symptom nausea : 5
-Symptom low blood pressure : 4
-Symptom rapid heart rate : 1
-Symptom dry mouth : 8
+Symptom  : 5
 Symptom anxiety : 5
+Symptom arrhythmias : 3
+Symptom blindness : 1
+Symptom blurred vision : 5
+Symptom constricted pupils : 3
+Symptom cough : 6
+Symptom dilated pupils : 4
+Symptom dizziness : 5
+Symptom dry mouth : 8
+Symptom fever : 7
+Symptom headache : 3
+Symptom high blood pressure : 10
+Symptom inflammation : 7
+Symptom insomnia : 4
+Symptom low blood pressure : 4
+Symptom nausea : 5
+Symptom rapid heart rate : 1
 Symptom rash : 4
 Symptom shortness of breath : 3
-Symptom arrhythmias : 3
-Symptom inflammation : 7
-Symptom high blood pressure : 10
-Symptom water retention : 1
-Symptom headache : 3
+Symptom stiff neck : 4
 Symptom stomach pain : 3
-Symptom blurred vision : 5
+Symptom tremor : 4
+Symptom water retention : 1

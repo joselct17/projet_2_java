@@ -3,9 +3,7 @@ package com.hemebiotech.analytics;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class WriteDataToFile {
 
@@ -22,18 +20,22 @@ public class WriteDataToFile {
 
 
         // hashmap to store the frequency of element
-        Map<String, Integer> hashMap = new HashMap<String, Integer>();
+        Map<String, Integer> treeMap = new TreeMap<String, Integer>(String.CASE_INSENSITIVE_ORDER);
 
-        for (String i : symptoms) {
-            Integer j = hashMap.get(i);
-            hashMap.put(i, (j == null) ? 1 : j + 1);
+
+
+        if (symptoms != null) {
+            for (String i : symptoms) {
+                Integer j = treeMap.get(i);
+                treeMap.put(i, (j == null) ? 1 : j + 1);
+            }
         }
 
         // displaying the occurrence of elements in the arraylist
 
         try (BufferedWriter fw = new BufferedWriter(new FileWriter("result.out"))) {
 
-            for (Map.Entry<String, Integer> val : hashMap.entrySet()) {
+            for (Map.Entry<String, Integer> val : treeMap.entrySet()) {
 
                 fw.write("Symptom " + val.getKey() + " " + ": " + val.getValue());
 
@@ -50,6 +52,6 @@ public class WriteDataToFile {
         }
 
 
-        return hashMap;
+        return treeMap;
     }
 }
