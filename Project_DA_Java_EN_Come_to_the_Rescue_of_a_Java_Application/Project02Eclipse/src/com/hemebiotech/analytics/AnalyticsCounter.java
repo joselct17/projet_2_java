@@ -5,14 +5,19 @@ import java.util.Map;
 
 public class AnalyticsCounter {
 
+	/**
+	 *
+	 * @param args
+	 * @throws Exception
+	 */
 	
 	public static void main(String args[]) throws Exception {
 
+		//Call obj readSymptom
 		ReadSymptomDataFromFile readSymptom = new ReadSymptomDataFromFile("Project02Eclipse/symptoms.txt");
 
+		//
 		ArrayList<String> symptoms = readSymptom.GetSymptoms();
-
-		//System.out.println(symptoms);
 
 		WriteDataToFile writeData = new WriteDataToFile("result.out");
 
