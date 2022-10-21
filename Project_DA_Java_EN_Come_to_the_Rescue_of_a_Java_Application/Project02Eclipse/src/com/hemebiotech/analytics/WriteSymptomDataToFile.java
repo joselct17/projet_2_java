@@ -13,6 +13,8 @@ public class WriteSymptomDataToFile implements ISymptomWriter{
     /**
      *
      * @param filepath a full or partial path to file with symptom strings in it, one per line
+     * @return  Write a Map with all the symptoms in a file in alphabetical order
+     *
      */
 
     public WriteSymptomDataToFile(String filepath) {this.filepath = filepath;}
@@ -33,8 +35,7 @@ public class WriteSymptomDataToFile implements ISymptomWriter{
 
                     fileWriter.newLine();
                 }
-
-                fileWriter.close();
+                fileWriter.flush();
 
             }
             catch (IOException e) {

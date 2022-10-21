@@ -6,7 +6,11 @@ import java.util.TreeMap;
 
 public class CountDataFrequencies {
 
-
+    /**
+     *
+     * @param symptoms an Array list with symptoms
+     * @return Count the symptom's frequencies
+     */
 
     public static Map<String, Integer> countFrequencies(ArrayList<String> symptoms) {
 

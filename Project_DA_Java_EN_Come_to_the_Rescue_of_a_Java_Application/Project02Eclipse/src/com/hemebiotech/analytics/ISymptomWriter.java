@@ -10,7 +10,7 @@ public interface ISymptomWriter {
     /**
      *
      * @param treeMap
-     * @return
+     * @return a map with all symptoms one per line
      */
 
 

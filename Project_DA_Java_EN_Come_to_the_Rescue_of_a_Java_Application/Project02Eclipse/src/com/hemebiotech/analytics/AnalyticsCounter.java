@@ -21,14 +21,14 @@ public class AnalyticsCounter {
 
 		// Writing data in the file
 
-		CountDataFrequencies countFrequencies = new CountDataFrequencies();
+		CountDataFrequencies countSymptoms= new CountDataFrequencies();
 
-		Map<String, Integer> treeMap = countFrequencies.countFrequencies(symptoms);
+		Map<String, Integer> treeMap = countSymptoms.countFrequencies(symptoms);
 
 
-		WriteSymptomDataToFile writeInFile = new WriteSymptomDataToFile("result.out");
+		WriteSymptomDataToFile writeSymptoms = new WriteSymptomDataToFile("result.out");
 
-		writeInFile.writeData(treeMap);
+		writeSymptoms.writeData(treeMap);
 
 
 	}
