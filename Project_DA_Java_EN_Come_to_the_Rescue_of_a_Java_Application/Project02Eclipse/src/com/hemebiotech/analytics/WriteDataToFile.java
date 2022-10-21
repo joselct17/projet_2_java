@@ -26,7 +26,7 @@ public class WriteDataToFile {
         Map<String, Integer> treeMap = new TreeMap<String, Integer>(String.CASE_INSENSITIVE_ORDER);
 
 
-
+        //Iteration in list symptoms
         if (symptoms!= null) {
             for (String i : symptoms) {
                 Integer j = treeMap.get(i);

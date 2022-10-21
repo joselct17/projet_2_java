@@ -1,13 +1,12 @@
 package com.hemebiotech.analytics;
 
 import java.util.ArrayList;
-import java.util.Map;
 
 public class AnalyticsCounter {
 
 	/**
 	 *
-	 * @param args
+	 * @param args My name
 	 * @throws Exception
 	 */
 	
@@ -16,13 +15,14 @@ public class AnalyticsCounter {
 		//Call obj readSymptom
 		ReadSymptomDataFromFile readSymptom = new ReadSymptomDataFromFile("Project02Eclipse/symptoms.txt");
 
-		//
-		ArrayList<String> symptoms = readSymptom.GetSymptoms();
+		//Call obj symptoms
+		ArrayList<String> symptoms = readSymptom.getSymptoms();
 
+		// Writing data in the file
 		WriteDataToFile writeData = new WriteDataToFile("result.out");
 
 
-		Map<String, Integer> data = writeData.countFrequencies(symptoms);
+		writeData.countFrequencies(symptoms);
 
 	}
 }
