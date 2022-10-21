@@ -1,6 +1,7 @@
 package com.hemebiotech.analytics;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 public class AnalyticsCounter {
 
@@ -19,10 +20,16 @@ public class AnalyticsCounter {
 		ArrayList<String> symptoms = readSymptom.getSymptoms();
 
 		// Writing data in the file
-		WriteDataToFile writeData = new WriteDataToFile("result.out");
+
+		CountDataFrequencies countFrequencies = new CountDataFrequencies();
+
+		Map<String, Integer> treeMap = countFrequencies.countFrequencies(symptoms);
 
 
-		writeData.countFrequencies(symptoms);
+		WriteSymptomDataToFile writeInFile = new WriteSymptomDataToFile("result.out");
+
+		writeInFile.writeData(treeMap);
+
 
 	}
 }

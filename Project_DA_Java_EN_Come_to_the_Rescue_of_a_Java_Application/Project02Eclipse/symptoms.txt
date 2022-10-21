@@ -86,8 +86,6 @@ arrhythmias
 rash
 rash
 fever
-
-
 dry mouth
 fever
 high blood pressure
@@ -100,8 +98,13 @@ anxiety
 anxiety
 cough
 blurred vision
-lolo
-lolo
+
+
+
+
+
+
+
 
 
 
