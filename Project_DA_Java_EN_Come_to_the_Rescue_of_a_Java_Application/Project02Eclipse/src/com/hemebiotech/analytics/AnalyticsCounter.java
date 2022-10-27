@@ -27,7 +27,7 @@ public class AnalyticsCounter {
 		Map<String, Integer> treeMap = countSymptoms.countFrequencies(symptoms);
 
 		// Writing in the file
-		WriteSymptomDataToFile writeSymptoms = new WriteSymptomDataToFile("result.out");
+		WriteSymptomDataToFile writeSymptoms = new WriteSymptomDataToFile("");
 
 		writeSymptoms.writeData(treeMap);
 

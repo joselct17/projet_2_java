@@ -1,8 +1,6 @@
 package com.hemebiotech.analytics;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
 
 public class WriteSymptomDataToFile implements ISymptomWriter{
@@ -21,13 +19,21 @@ public class WriteSymptomDataToFile implements ISymptomWriter{
 
 
     @Override
-    public  Map<String, Integer> writeData(Map<String, Integer> treeMap)
-    {
+    public  Map<String, Integer> writeData(Map<String, Integer> treeMap) throws IOException {
 
 
         // displaying the occurrence of elements in the arraylist
         if (filepath != null ) {
-            try (BufferedWriter fileWriter = new BufferedWriter(new FileWriter(filepath))) {
+
+            InputStreamReader inputReader = new InputStreamReader(System.in);
+
+            BufferedReader pathReader = new BufferedReader (inputReader);
+
+            System.out.println("Write your filepath out :");
+
+            String path = pathReader.readLine();
+
+            try (BufferedWriter fileWriter = new BufferedWriter(new FileWriter(path))) {
 
                 for (Map.Entry<String, Integer> val : treeMap.entrySet()) {
 

@@ -39,7 +39,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 
 				BufferedReader pathReader = new BufferedReader (inputReader);
 
-				System.out.println("Write your filepath :");
+				System.out.println("Write your filepath in :");
 
 				String path = pathReader.readLine();
 
