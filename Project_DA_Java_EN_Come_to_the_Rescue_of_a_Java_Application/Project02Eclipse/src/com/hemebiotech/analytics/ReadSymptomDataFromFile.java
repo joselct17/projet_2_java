@@ -35,13 +35,9 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 		if (filepath != null) {
 			try {
 
-				InputStreamReader inputReader = new InputStreamReader(System.in);
+				InputReader inputReader = new InputReader();
 
-				BufferedReader pathReader = new BufferedReader (inputReader);
-
-				System.out.println("Write your filepath in :");
-
-				String path = pathReader.readLine();
+				String path = inputReader.filePath();
 
 				BufferedReader reader = new BufferedReader( new FileReader(path));
 

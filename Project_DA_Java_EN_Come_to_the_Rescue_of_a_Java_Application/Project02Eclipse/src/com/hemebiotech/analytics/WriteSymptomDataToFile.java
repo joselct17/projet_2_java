@@ -25,13 +25,9 @@ public class WriteSymptomDataToFile implements ISymptomWriter{
         // displaying the occurrence of elements in the arraylist
         if (filepath != null ) {
 
-            InputStreamReader inputReader = new InputStreamReader(System.in);
-
-            BufferedReader pathReader = new BufferedReader (inputReader);
-
-            System.out.println("Write your filepath out :");
-
-            String path = pathReader.readLine();
+            InputReader inputReader = new InputReader();
+            
+            String path = inputReader.filePath();
 
             try (BufferedWriter fileWriter = new BufferedWriter(new FileWriter(path))) {
 
