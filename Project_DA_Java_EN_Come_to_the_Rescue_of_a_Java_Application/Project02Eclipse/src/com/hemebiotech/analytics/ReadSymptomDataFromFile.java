@@ -24,9 +24,6 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 		this.filepath = path;
 	}
 
-	public ReadSymptomDataFromFile() {
-
-	}
 
 	@Override
 	public ArrayList<String> getSymptoms() {
@@ -35,11 +32,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 		if (filepath != null) {
 			try {
 
-				InputReader inputReader = new InputReader();
-
-				String path = inputReader.filePath();
-
-				BufferedReader reader = new BufferedReader( new FileReader(path));
+				BufferedReader reader = new BufferedReader( new FileReader(filepath));
 
 				String line = reader.readLine();
 				

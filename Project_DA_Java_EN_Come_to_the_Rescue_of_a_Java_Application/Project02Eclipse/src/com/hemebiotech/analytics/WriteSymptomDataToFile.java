@@ -25,11 +25,7 @@ public class WriteSymptomDataToFile implements ISymptomWriter{
         // displaying the occurrence of elements in the arraylist
         if (filepath != null ) {
 
-            InputReader inputReader = new InputReader();
-            
-            String path = inputReader.filePath();
-
-            try (BufferedWriter fileWriter = new BufferedWriter(new FileWriter(path))) {
+            try (BufferedWriter fileWriter = new BufferedWriter(new FileWriter(filepath))) {
 
                 for (Map.Entry<String, Integer> val : treeMap.entrySet()) {
 
