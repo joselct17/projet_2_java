@@ -12,7 +12,7 @@ public class CountDataFrequencies {
      * @return Count the symptom's frequencies
      */
 
-    public static Map<String, Integer> countFrequencies(ArrayList<String> symptoms) {
+    public Map<String, Integer> countFrequencies(ArrayList<String> symptoms) {
 
         // treeMap to store the frequency of elements in alphabetical order
         Map<String, Integer> treeMap = new TreeMap<String, Integer>(String.CASE_INSENSITIVE_ORDER);
