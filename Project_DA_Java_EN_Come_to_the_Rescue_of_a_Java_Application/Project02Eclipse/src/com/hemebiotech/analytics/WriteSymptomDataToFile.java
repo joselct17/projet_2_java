@@ -19,7 +19,7 @@ public class WriteSymptomDataToFile implements ISymptomWriter{
 
 
     @Override
-    public  Map<String, Integer> writeData(Map<String, Integer> treeMap) throws IOException {
+    public  Map<String, Integer> writeData(Map<String, Integer> treeMap)  {
 
 
         // displaying the occurrence of elements in the arraylist
